@@ -13,15 +13,6 @@
     src: url('/fonts/Ubuntu/Ubuntu-Bold.ttf');
 }
 
-pre {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: black;
-    color: white;
-}
-
 body {
     margin: 0;
     padding: 0;
