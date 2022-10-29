@@ -42,6 +42,7 @@ header {
     height: 60px;
     margin: -5px 0 4rem 0;
     padding: 0;
+    z-index: 1;
 }
 
 header h1 {
@@ -125,28 +126,131 @@ body.unfix-header .surname {
     100% {transform: translateY(0%) translateX(-5%); color: white;}
 }
 
-main {
-    min-height: 100vh;
-}
-
-main {
+main, footer {
     padding: 1.75rem;
 }
 
-#who-am-i ul {
-    list-style: none;
+p {
+    margin: 0 0 1rem 0;
     padding: 0;
 }
 
-#who-am-i ul li {
-    padding: 0.5rem 0;
+sub {
+    color: #cccccc;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section.intro-snippet ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section.intro-snippet ul li {
+    padding: 0 0 1.75rem 0;
+}
+
+
+section.intro-snippet {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateX(-5%);
+    transition: all 1s ease-in-out;
+}
+
+
+section.intro-snippet:nth-child(2n) {
+    align-items: flex-end;
+    text-align: end;
+    margin-left: auto;
+    transform: translateX(5%);
+}
+
+section.intro-snippet img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+section.intro-snippet.show-snippet {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.contact {
+    width: 100%;
+    margin-bottom: 1.75rem;
+}
+
+.contact ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.contact li {
+    opacity: 0;
+    transform: translateX(-25%);
+    transition: all 1s ease-in-out;
+}
+
+.contact li.show-contact {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.contact li.show-contact:nth-child(1) {
+    transition-delay: 0.25s;
+}
+
+.contact li.show-contact:nth-child(2){
+    transition-delay: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
     header h1 {
         left: 20%;
     }
-    main {
+    main, footer {
         padding: 1.75rem 20%;
+    }
+    section.intro-snippet {
+        max-width: 45%;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .name, body.unfix-header .name {
+        animation: none;
+        transform: translateY(0%);
+    }
+    .surname, body.unfix-header .surname {
+        animation: none;
+        transform: translateY(0%);
+        color: white;
+    }
+    body.fixed-header .surname {
+        animation: none;
+        transform: translateY(-100%);
+        color: black;
+    }
+    section.intro-snippet {
+        transition: none;
+    }
+    .contact li {
+        transition: none;
     }
 }

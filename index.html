@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Alif Borgmeier</title>
-    <link rel="stylesheet" href="css/style.css">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
 </head>
 <body>
     <div id="white-box">
@@ -14,17 +17,52 @@
         <h1><span class="name">Alif</span><br><span class="surname">Borgmeier</span></h1>
     </header>
     <main>
-        <section id="who-am-i">
+        <section class="intro-snippet" id="who-am-i" tabindex="1">
             <h2>Who am I?</h2>
             <ul>
-                <li><span id="my-age"></span> years old – born 2nd of march 2000 in Hamm</li>
-                <li>Computer Science Student – TU Dortmund</li>
-                <li>Interested in web development</li>
+                <li><span id="my-age">22</span> years old – born 2nd of march 2000 in Hamm, Germany 🇩🇪</li>
+                <li>Computer Science Student – TU Dortmund 🎓</li>
+                <li>Interested in web development 🌐</li>
+            </ul>
+        </section>
+        <section class="intro-snippet" id="my-hobbies" tabindex="2">
+            <h2>My hobbies</h2>
+            <ul>
+                <li>
+                    <p>I like taking trips with my motorcycle 🏍️</p>
+                    <img src="/images/me-and-bike.png" alt="A picture of me and my bike">
+                    <sub>Me and my motorcycle</sub>
+                </li>
+                <li>
+                    <p>I also like to play video games 🎮</p>
+                </li>
+                <li>
+                    <p>And watching YouTube videos 📺</p>
+                </li>
+            </ul>
+        </section>
+        <section class="intro-snippet" id="projects" tabindex="3">
+            <h2>My projects</h2>
+            <ul>
+                <li>
+                    <p>Currently I am playing around with Angular and the Spotify API</p>
+                    <img src="/images/spotify-stats-screenshot.png" alt="A screenshot of my Angular application SpotifyStats">
+                    <sub>A screenshot of my project. <a href="https://alifb.github.io/spotifystatsng" target="_blank">Check it out!</a></sub>
+                </li>
             </ul>
         </section>
     </main>
     <footer>
-
+        <div class="contact">
+            <h2>Feel free to contact me!</h2>
+            <ul>
+                <li class="contact-info" id="github"><a href="https://github.com/alifb" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li class="contact-info" id="mail"><a href="mailto:alif.borgmeier@tu-dortmund.de"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &#169; <span id="copyright-year">2022</span> Alif Borgmeier
+        </div>
     </footer>
     <script src="js/main.js" defer></script>
 </body>
