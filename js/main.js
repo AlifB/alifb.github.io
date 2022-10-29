@@ -1,3 +1,4 @@
+const whiteBox = document.querySelector('#white-box');
 const header = document.querySelector('header');
 const surname = document.querySelector('.surname');
 const copyrightYear = document.querySelector('#copyright-year');
@@ -34,11 +35,11 @@ myAge.innerHTML = age;
 copyrightYear.innerHTML = currentDate.getFullYear();
 
 document.addEventListener('scroll', () => {
-    if(!document.body.classList.contains('fixed-header') && (header.getBoundingClientRect().y <= 10)) {
+    if(!document.body.classList.contains('fixed-header') && (window.scrollY >= whiteBox.offsetHeight)) {
         document.body.classList.add('fixed-header');
         document.body.classList.remove('unfix-header');
     } else {
-        if(document.body.classList.contains('fixed-header') && (header.getBoundingClientRect().y >= 10)) {
+        if(document.body.classList.contains('fixed-header') && (window.scrollY <= whiteBox.offsetHeight)) {
             document.body.classList.remove('fixed-header');
             document.body.classList.add('unfix-header');
         }

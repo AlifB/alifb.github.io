@@ -13,6 +13,15 @@
     src: url('/fonts/Ubuntu/Ubuntu-Bold.ttf');
 }
 
+pre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: black;
+    color: white;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -34,6 +43,7 @@ h1 {
 }
 
 header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background: white;
@@ -197,11 +207,11 @@ section.intro-snippet.show-snippet {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 1rem;
     font-size: 2rem;
 }
 
 .contact li {
+    margin-right: 1rem;
     opacity: 0;
     transform: translateX(-25%);
     transition: all 1s ease-in-out;
