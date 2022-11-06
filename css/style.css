@@ -2,11 +2,13 @@
     font-family: Ubuntu;
     src: url('/fonts/Ubuntu/Ubuntu-Regular.ttf');
 }
+
 @font-face {
     font-family: Ubuntu;
     font-weight: lighter;
     src: url('/fonts/Ubuntu/Ubuntu-Light.ttf');
 }
+
 @font-face {
     font-family: Ubuntu;
     font-weight: bold;
@@ -55,24 +57,22 @@ header h1 {
 }
 
 .name {
-    display: inline-block;
-    transform: translateY(100%);
+    display: block;
+    transform: translateX(-5%) translateY(100%);
     animation-name: name-slideIn;
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
-    transform: translateY(100%);
 }
 
 .surname {
-    display: inline-block;
+    display: block;
     color: white;
-    padding-left: 4.25rem;
     animation-name: surname-slideIn;
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
-    transform: translateY(-100%);
+    transform: translateX(30%) translateY(-100%);
 }
 
 body.fixed-header .surname {
@@ -80,11 +80,11 @@ body.fixed-header .surname {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-delay: 0s;
-    transform: translateY(0%) translateX(-5%);
+    transform: translateX(-100%) translateY(40%);
 }
 
 body.unfix-header .surname {
-    transform: translateY(-100%) translateX(0%);
+    transform: translateX(30%) translateY(0%);
     color: black;
     animation-name: surname-unfix-header;
     animation-duration: 1s;
@@ -92,42 +92,69 @@ body.unfix-header .surname {
     animation-fill-mode: forwards;
 }
 
-@keyframes slideIn-top-down {
-    from {transform: translateY(-100%)}
-    to {transform: translateY(0%)}
-}
-
 @keyframes surname-slideIn {
-    0% {transform: translateY(-100%)}
-    25% {transform: translateX(0%);}
-    100% {transform: translateY(0%) translateX(-5%)}
+    0% {
+        transform: translateX(35%) translateY(-100%);
+    }
+
+    25% {
+        transform: translateX(35%);
+    }
+
+    100% {
+        transform: translateX(30%) translateY(0%);
+    }
 }
 
 @keyframes name-slideIn {
-    0% {transform: translateY(100%)}
-    25% {transform: translateX(0%)}
-    100% {transform: translateY(0%) translateX(15%)}
+    0% {
+        transform: translateX(-5%) translateY(100%);
+    }
+
+    25% {
+        transform: translateX(-5%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
 }
 
 @keyframes surname-fixed-header {
     0% {
-        transform: translateY(0%) translateX(-5%);
+        transform: translateX(30%) translateY(0%);
         color: white;
     }
-    25% {transform: translateY(-100%) translateX(-5%);}
+
+    25% {
+        transform: translateX(30%) translateY(-100%);
+    }
+
     100% {
-        transform: translateY(-100%) translateX(0%);
+        transform: translateX(40%) translateY(-100%);
         color: black;
     }
 }
 
 @keyframes surname-unfix-header {
-    0% {transform: translateY(-100%); color: black;}
-    25% {transform: translateY(0%); color: white;}
-    100% {transform: translateY(0%) translateX(-5%); color: white;}
+    0% {
+        transform: translateX(40%) translateY(-100%);
+        color: black;
+    }
+
+    25% {
+        transform: translateX(40%) translateY(0%);
+        color: white;
+    }
+
+    100% {
+        transform: translateX(30%) translateY(0%);
+        color: white;
+    }
 }
 
-main, footer {
+main,
+footer {
     padding: 1.75rem;
 }
 
@@ -217,7 +244,7 @@ section.intro-snippet.show-snippet {
     transition-delay: 0.25s;
 }
 
-.contact li.show-contact:nth-child(2){
+.contact li.show-contact:nth-child(2) {
     transition-delay: 0.5s;
 }
 
@@ -225,32 +252,41 @@ section.intro-snippet.show-snippet {
     header h1 {
         left: 20%;
     }
-    main, footer {
+
+    main,
+    footer {
         padding: 1.75rem 20%;
     }
+
     section.intro-snippet {
         max-width: 45%;
     }
 }
 
 @media (prefers-reduced-motion) {
-    .name, body.unfix-header .name {
+    .name,
+    body.unfix-header .name {
         animation: none;
-        transform: translateY(0%);
+        transform: translateX(0%) translateY(0%);
     }
-    .surname, body.unfix-header .surname {
+
+    .surname,
+    body.unfix-header .surname {
         animation: none;
-        transform: translateY(0%);
+        transform: translateX(30%) translateY(0%);
         color: white;
     }
+
     body.fixed-header .surname {
         animation: none;
-        transform: translateY(-100%);
+        transform: translateX(40%) translateY(-100%);
         color: black;
     }
+
     section.intro-snippet {
         transition: none;
     }
+
     .contact li {
         transition: none;
     }
