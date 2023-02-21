@@ -7,7 +7,7 @@ const pos2 = document.querySelector('#pos2');
 const pos3 = document.querySelector('#pos3');
 
 document.addEventListener('scroll', (event) => {
-    pos.dataset.scroll = (Math.max(0, window.scrollY - (section.getBoundingClientRect().y + pos.getBoundingClientRect().height * 2)) * 0.001);
+    pos.dataset.scroll = Math.max(0, -(section.getBoundingClientRect().y + pos.getBoundingClientRect().height) * 0.003);
     updateHeading();
     updatePos1();
     updatePos2();
@@ -27,8 +27,9 @@ function updatePos1() {
 }
 
 function updatePos2() {
+    let startFade = 3.5;
     let start = 4;
-    pos2.style.opacity = `${Math.min(Math.max(0, -start + parseFloat(pos.dataset.scroll)), 1)}`;
+    pos2.style.opacity = `${Math.min(Math.max(0, -startFade + parseFloat(pos.dataset.scroll)), 1)}`;
     if(parseFloat(pos.dataset.scroll) >= start) {
         let z = pos.dataset.scroll - start;
         let x = Math.min(0, -Math.pow((parseFloat(pos.dataset.scroll) - start) * 5.5, 2));
@@ -37,8 +38,9 @@ function updatePos2() {
 }
 
 function updatePos3() {
+    let startFade = 6.5;
     let start = 7.5;
-    pos3.style.opacity = `${Math.min(Math.max(0, -start + parseFloat(pos.dataset.scroll)), 1)}`;
+    pos3.style.opacity = `${Math.min(Math.max(0, -startFade + parseFloat(pos.dataset.scroll)), 1)}`;
     if(parseFloat(pos.dataset.scroll) >= start) {
         let z = pos.dataset.scroll - start;
         let x = Math.max(0, Math.pow((parseFloat(pos.dataset.scroll) - start) * 4.5, 2));

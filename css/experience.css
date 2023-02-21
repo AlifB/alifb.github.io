@@ -48,7 +48,7 @@
 }
 
 #experience {
-    height: 700vh;
+    height: 580vh;
 }
 
 .positions h2 {
@@ -61,21 +61,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .position, .position h1 {
+
+    .position,
+    .position h1 {
         font-size: 0.85rem;
     }
-    /* .job-details span {
-        font-size: 0.65rem;
-    }
-    .position h1 {
-        font-size: 1rem;
-    }
-    .position p {
-        font-size: 0.75rem;
-    } */
-    #pos2 img {
+
+    #pos1 img,
+    #pos2 img,
+    #pos3 img {
         margin-top: auto;
         margin-bottom: auto;
-        height: 45%;
+        height: 50%;
     }
 }
