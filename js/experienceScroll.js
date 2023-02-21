@@ -7,7 +7,7 @@ const pos2 = document.querySelector('#pos2');
 const pos3 = document.querySelector('#pos3');
 
 document.addEventListener('scroll', (event) => {
-    pos.dataset.scroll = Math.max(0, -(section.getBoundingClientRect().y + pos.getBoundingClientRect().height) * 0.003);
+    pos.dataset.scroll = Math.max(0, -(section.getBoundingClientRect().y + pos.getBoundingClientRect().height - 250) * 0.003);
     updateHeading();
     updatePos1();
     updatePos2();
