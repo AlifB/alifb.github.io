@@ -1,0 +1,81 @@
+.positions-wrapper.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.positions {
+    position: relative;
+    display: grid;
+    place-content: center;
+    height: 100lvh;
+    perspective: 5px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.position {
+    height: 80px;
+    width: max-content;
+    display: flex;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+}
+
+.position img {
+    height: 100%;
+}
+
+.position h1,
+.position p {
+    margin: 0;
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
+#pos2,
+#pos3 {
+    opacity: 0;
+}
+
+#experience {
+    height: 700vh;
+}
+
+.positions h2 {
+    position: absolute;
+    width: 100%;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .position, .position h1 {
+        font-size: 0.85rem;
+    }
+    /* .job-details span {
+        font-size: 0.65rem;
+    }
+    .position h1 {
+        font-size: 1rem;
+    }
+    .position p {
+        font-size: 0.75rem;
+    } */
+    #pos2 img {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 45%;
+    }
+}
