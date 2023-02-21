@@ -7,21 +7,30 @@
 
 .positions {
     position: relative;
+    display: -ms-grid;
     display: grid;
     place-content: center;
     height: 100vh;
+    -webkit-perspective: 5px;
     perspective: 5px;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     overflow: hidden;
 }
 
 .position {
     height: 80px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: calc(50% - 25px);
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     font-size: 1rem;
 }
@@ -36,8 +45,15 @@
 }
 
 .job-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     margin-left: 10px;
 }
@@ -49,6 +65,7 @@
 
 #experience {
     height: 550vh;
+    height: clamp(4650px, 550vh, 5800px);
 }
 
 .positions h2 {
@@ -56,6 +73,8 @@
     width: 100%;
     top: 200px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     text-align: center;
 }
