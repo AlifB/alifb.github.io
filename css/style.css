@@ -1,300 +1,409 @@
-@font-face {
-    font-family: Ubuntu;
-    src: url('/fonts/Ubuntu/Ubuntu-Regular.ttf');
-}
-
-@font-face {
-    font-family: Ubuntu;
-    font-weight: lighter;
-    src: url('/fonts/Ubuntu/Ubuntu-Light.ttf');
-}
-
-@font-face {
-    font-family: Ubuntu;
-    font-weight: bold;
-    src: url('/fonts/Ubuntu/Ubuntu-Bold.ttf');
+* {
+    box-sizing: border-box;
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
-    width: 100%;
+    color: #FFF;
+    font-family: Fira Sans, sans-serif;
+    font-style: normal;
+    line-height: normal;
+    background: #1C2435;
+}
+
+main {
+    position: relative;
+    margin: auto;
+    max-width: 1280px;
     height: 100%;
-    background-color: black;
-    color: white;
-    font-family: 'Ubuntu', sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
+section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 50px;
 }
 
-#white-box {
-    background: white;
-    width: 100%;
-    height: 30vh;
-}
-
-header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background: white;
-    color: black;
-    width: 100%;
-    height: 60px;
-    margin: -5px 0 4rem 0;
-    padding: 0;
-    z-index: 1;
-}
-
-header h1 {
+.blur {
     position: absolute;
+    background: rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(350px);
+    -webkit-backdrop-filter: blur(350px);
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    left: 1rem;
-    margin: 0;
-    transform: translateY(50%);
+    z-index: -10;
+}
+
+.shape.hidden {
+    visibility: hidden;
+}
+
+.shape-1 {
+    position: absolute;
+    left: calc(-1 * 750px / 2);
+    top: calc(50% - 750px / 2);
+    width: 750px;
+    height: 750px;
+    background: #00A3FF;
+    z-index: -20;
+    border-radius: 120px;
+}
+
+.shape-2 {
+    position: absolute;
+    left: calc(-1 * 450px / 2 + 750px / 2);
+    top: calc(50% - 600px / 2 + 650px / 2);
+    width: 450px;
+    height: 600px;
+    background: #6100FF;
+    border-radius: 200px 200px 75px 75px;
+    z-index: -20;
+}
+
+.shape-3 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 450px;
+    height: 850px;
+    transform: rotate(-65deg);
+    border-radius: 75px;
+    background: #06F;
+    z-index: -20;
+}
+
+.shape-4 {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    width: 575px;
+    height: 750px;
+    transform: rotate(-45deg);
+    border-radius: 100%;
+    background: #F53B7E;
+    z-index: -20;
+}
+
+.shape-5 {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    width: 600px;
+    height: 600px;
+    z-index: -20;
+    border-radius: 100%;
+    background-color: #16FF02;
 }
 
 .name {
-    display: block;
-    transform: translateX(-5%) translateY(100%);
-    animation-name: name-slideIn;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.surname {
-    display: block;
-    color: white;
-    animation-name: surname-slideIn;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    transform: translateX(30%) translateY(-100%);
-}
-
-body.fixed-header .surname {
-    animation-name: surname-fixed-header;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0s;
-    transform: translateX(-100%) translateY(40%);
-}
-
-body.unfix-header .surname {
-    transform: translateX(30%) translateY(0%);
-    color: black;
-    animation-name: surname-unfix-header;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes surname-slideIn {
-    0% {
-        transform: translateX(35%) translateY(-100%);
-    }
-
-    25% {
-        transform: translateX(35%);
-    }
-
-    100% {
-        transform: translateX(30%) translateY(0%);
-    }
-}
-
-@keyframes name-slideIn {
-    0% {
-        transform: translateX(-5%) translateY(100%);
-    }
-
-    25% {
-        transform: translateX(-5%);
-    }
-
-    100% {
-        transform: translateX(0%) translateY(0%);
-    }
-}
-
-@keyframes surname-fixed-header {
-    0% {
-        transform: translateX(30%) translateY(0%);
-        color: white;
-    }
-
-    25% {
-        transform: translateX(30%) translateY(-100%);
-    }
-
-    100% {
-        transform: translateX(40%) translateY(-100%);
-        color: black;
-    }
-}
-
-@keyframes surname-unfix-header {
-    0% {
-        transform: translateX(40%) translateY(-100%);
-        color: black;
-    }
-
-    25% {
-        transform: translateX(40%) translateY(0%);
-        color: white;
-    }
-
-    100% {
-        transform: translateX(30%) translateY(0%);
-        color: white;
-    }
-}
-
-main,
-footer {
-    padding: 1.75rem;
-}
-
-p {
-    margin: 0 0 1rem 0;
-    padding: 0;
-}
-
-figcaption {
-    color: #cccccc;
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section.intro-snippet ul {
+    display: flex;
     width: 100%;
-    list-style: none;
+    min-height: 100vh;
+    padding: 0px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.name h1 {
+    width: 100%;
+    font-size: 8rem;
+    font-weight: 700;
     padding: 0;
     margin: 0;
 }
 
-section.intro-snippet ul li {
-    padding: 0 0 1.75rem 0;
-}
-
-
-section.intro-snippet {
+.ueber-mich {
     display: flex;
-    width: 100%;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateX(-5%);
-    transition: all 1s ease-in-out;
+    width: 100%;
+    min-height: 100vh;
 }
 
-
-section.intro-snippet:nth-child(2n) {
-    align-items: flex-end;
-    text-align: end;
-    margin-left: auto;
-    transform: translateX(5%);
+.infos {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
 }
 
-figure {
-    padding: 0;
+.infos p {
+    margin: 0 0 25px 0;
+}
+
+.infos p:last-child {
     margin: 0;
 }
 
-section.intro-snippet img {
-    width: 100%;
-    border-radius: 15px;
+.ueber-mich .bilder {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: auto;
+    flex-wrap: wrap;
 }
 
-section.intro-snippet.show-snippet {
+.ueber-mich .bilder img {
+    width: 235px;
+    height: 235px;
+    background: white;
+    border-radius: 25px;
+    margin: 25px;
+    object-fit: cover;
+}
+
+.erfahrungen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.erfahrungen .job {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.erfahrungen .jahr:nth-last-child(2) {
+    margin-bottom: auto;
+}
+
+.erfahrungen .jahr h3 {
     opacity: 1;
-    transform: translateX(0%);
 }
 
-.contact {
-    width: 100%;
-    margin-bottom: 1.75rem;
+.erfahrungen .job .zeitraum-linie {
+    display: flex;
+    position: relative;
+    width: 120px;
+    height: 1px;
+    margin: 0 25px;
 }
 
-.contact ul {
+.erfahrungen .job .zeitraum-linie::after {
+    content: '';
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: #ffffff00;
+    border-top: 1px dotted white;
+}
+
+.erfahrungen .job .zeitraum {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0;
+}
+
+.erfahrungen .job .jobkarte {
     display: flex;
     width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 2rem;
-}
-
-.contact li {
-    margin-right: 1rem;
+    border-radius: 25px;
+    background: #D9D9D9;
+    color: #000;
+    padding: 15px 25px;
     opacity: 0;
-    transform: translateX(-25%);
-    transition: all 1s ease-in-out;
 }
 
-.contact li.show-contact {
-    opacity: 1;
-    transform: translateX(0%);
+.erfahrungen .job .jobkarte img {
+    width: 88px;
+    height: 88px;
+    background: white;
+    border-radius: 15px;
+    margin: auto 0;
 }
 
-.contact li.show-contact:nth-child(1) {
-    transition-delay: 0.25s;
+.erfahrungen .job .jobkarte .jobdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 15px;
 }
 
-.contact li.show-contact:nth-child(2) {
-    transition-delay: 0.5s;
+.erfahrungen .job .jobkarte p {
+    padding: 0;
+    margin: 0;
 }
 
-@media screen and (min-width: 768px) {
-    header h1 {
-        left: 20%;
+.erfahrungen .job .jobkarte .unternehmen {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.erfahrungen .job .jobkarte .position {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.kontakt {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt h2 {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.kontakt h3 {
+    margin-bottom: 50px;
+}
+
+.kontakt-arten {
+    margin-bottom: auto;
+}
+
+.kontakt-art {
+    display: flex;
+    align-items: center;
+}
+
+.kontakt-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.kontakt-link:last-child {
+    margin-bottom: 0;
+}
+
+.kontakt-art .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+}
+
+.kontakt-art i {
+    font-size: 6.25rem;
+}
+
+.kontakt-art span {
+    font-size: 2.5rem;
+}
+
+
+h2 {
+    margin: auto 0 50px 0;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+h3 {
+    margin: 0 0 25px 0;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .name h1 {
+        font-size: 3.5rem;
     }
 
-    main,
-    footer {
-        padding: 1.75rem 20%;
+    h2 {
+        font-size: 3rem;
     }
 
-    section.intro-snippet {
-        max-width: 45%;
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .erfahrungen .job {
+        flex-direction: column;
+    }
+
+    .erfahrungen .job .zeitraum-linie {
+        width: 50px;
+        margin: 50px 15px;
+        transform: rotate(90deg);
+    }
+
+    .erfahrungen .job .zeitraum {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .erfahrungen .job .jobkarte {
+        padding: 15px;
+    }
+
+    .erfahrungen .job .jobkarte img {
+        width: 50px;
+        height: 50px;
+        background: white;
+        border-radius: 15px;
+    }
+
+    .erfahrungen .job .jobkarte .unternehmen {
+        font-size: 1.25rem;
+    }
+
+    .erfahrungen .job .jobkarte .position {
+        font-size: 1rem;
+    }
+
+    .kontakt-art span {
+        font-size: 1rem;
+    }
+
+    .kontakt-art .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .kontakt-art i {
+        font-size: 3.25rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .infos {
+        font-size: 1.5rem;
+    }
+
+    .ueber-mich .bilder img {
+        width: 160px;
+        height: 160px;
+        margin: 15px;
     }
 }
 
-@media (prefers-reduced-motion) {
-    .name,
-    body.unfix-header .name {
-        animation: none;
-        transform: translateX(0%) translateY(0%);
+@media screen and (min-width: 375px) and (max-width: 500px) {
+    .ueber-mich .bilder {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
     }
 
-    .surname,
-    body.unfix-header .surname {
-        animation: none;
-        transform: translateX(30%) translateY(0%);
-        color: white;
+    .ueber-mich .bilder img {
+        margin: 0;
     }
+}
 
-    body.fixed-header .surname {
-        animation: none;
-        transform: translateX(40%) translateY(-100%);
-        color: black;
+@media screen and (max-width: 375px) {
+    .ueber-mich .bilder {
+        display: flex;
     }
-
-    section.intro-snippet {
-        transition: none;
-    }
-
-    .contact li {
-        transition: none;
+    .ueber-mich .bilder img {
+        margin: 15px;
     }
 }

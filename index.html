@@ -1,74 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alif Borgmeier</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="theme-color" content="#000000">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="fontawesome/css/brands.min.css">
-    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css">
 </head>
+
 <body>
-    <div id="white-box">
-    </div>
-    <header>
-        <h1><span class="name">Alif</span> <span class="surname">Borgmeier</span></h1>
-    </header>
+    <div class="blur"></div>
     <main>
-        <section class="intro-snippet" id="who-am-i" tabindex="1">
-            <h2><span data-lang="whoAmI-heading">Who am I?</span></h2>
-            <ul>
-                <li><span id="my-age">22</span> <span data-lang="whoAmI-age">years old – born 2nd march 2000 in Hamm, Germany 🇩🇪</span></li>
-                <li><span data-lang="whoAmI-university">Computer Science Student – TU Dortmund 🎓</span></li>
-                <li><span data-lang="whoAmI-interest">Interested in web development 🌐</span></li>
-            </ul>
+        <section class="name">
+            <h1>Alif Borgmeier</h1>
+            <div class="shape-1 shape"></div>
+            <div class="shape-2 shape"></div>
         </section>
-        <section class="intro-snippet" id="my-hobbies" tabindex="2">
-            <h2 data-lang="hobbies-heading">My hobbies</h2>
-            <ul>
-                <li>
-                    <p data-lang="hobbies-motorcycle">I like taking trips with my motorcycle 🏍️</p>
-                    <figure>
-                        <img src="/images/me-and-bike.png" alt="A picture of me and my bike" data-langAlt="hobbies-bikeImgAltText">
-                        <figcaption data-lang="hobbies-subMotorcycle">Me and my motorcycle</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <p data-lang="hobbies-games">I also like playing video games 🎮</p>
-                </li>
-                <li>
-                    <p data-lang="hobbies-youtube">And watching YouTube videos 📺</p>
-                </li>
-            </ul>
+        <section class="ueber-mich">
+            <h2>Über mich</h2>
+            <div class="infos">
+                <p>23 Jahre alt – am 02. März 2000 geboren in Hamm</p>
+                <p>TU Dortmund Student – Angewandte Informatik</p>
+                <p>Hobbies – Motorrad fahren, Webentwicklung, Gelegendlich Gaming</p>
+            </div>
+            <div class="bilder">
+                <img src="assets/images/hamm-glaselefant.jpg" alt="Bild vom Hammer Glaselefanten">
+                <img src="assets/images/tu-mathetower.jpg" alt="Bild vom Mathetower mit Logo der TU-Dormtund">
+                <img src="assets/images/düsseldorf-motorrad.jpg"
+                    alt="Bild von mir in Motorrad-Klamotten in Düsseldorf">
+                <a href="https://alifb.github.io/spotifystatsng" target="_blank"><img
+                        src="assets/images/spotify-stats-screenshot.png"
+                        alt="Bildschirmaufnahme von meiner Spotify-Statiskik Seite" title="Zu SpotifyStats"></a>
+            </div>
+            <div class="shape-3 shape"></div>
         </section>
-        <section class="intro-snippet" id="projects" tabindex="3">
-            <h2 data-lang="projects-heading">My projects</h2>
-            <ul>
-                <li>
-                    <p data-lang="projects-SpotifyStats">Currently I am playing around with Angular and the Spotify API</p>
-                    <figure>
-                        <img src="/images/spotify-stats-screenshot.png" alt="A screenshot of my Angular application SpotifyStats" data-langAlt="projects-SpotifyStatsImgAltText">
-                        <figcaption><span data-lang="project-subSpotifyStats">A screenshot of my project.</span> <a href="https://alifb.github.io/spotifystatsng" target="_blank" title="Link to my Angular App"><span data-lang="projects-linkSpotifyStats">Check it out!</span></a></figcaption>
-                    </figure>
-                </li>
-            </ul>
+        <section class="erfahrungen">
+            <h2>Erfahrungen</h2>
+            <div class="jahr">
+                <h3>2023</h3>
+                <div class="job">
+                    <div class="jobkarte">
+                        <img src="assets/images/cronos-logo.png" alt="Logo der cronos automation GmbH">
+                        <div class="jobdetails">
+                            <p class="unternehmen">cronos automation GmbH</p>
+                            <p class="position">Werkstudent – RPA-Entwickler</p>
+                        </div>
+                    </div>
+                    <div class="zeitraum-linie">
+                    </div>
+                    <p class="zeitraum">
+                        <span>Januar 23 –</span>
+                        <span>heute</span>
+                    </p>
+                </div>
+            </div>
+            <div class="jahr">
+                <h3>2022</h3>
+                <div class="job">
+                    <div class="jobkarte">
+                        <img src="assets/images/akafö-logo.png" alt="Logo des Akademischem Förderungswerks">
+                        <div class="jobdetails">
+                            <p class="unternehmen">Akademisches Förderungswerk</p>
+                            <p class="position">Werkstudent – Webdesign / Webentwicklung</p>
+                        </div>
+                    </div>
+                    <div class="zeitraum-linie">
+                    </div>
+                    <p class="zeitraum">
+                        <span>Juni 22 –</span>
+                        <span>Dezember 22</span>
+                    </p>
+                </div>
+            </div>
+            <div class="jahr">
+                <h3>2021</h3>
+                <div class="job">
+                    <div class="jobkarte">
+                        <img src="assets/images/fonefox-logo.png" alt="Logo der FoneFox Electronics GmbH">
+                        <div class="jobdetails">
+                            <p class="unternehmen">FoneFox Electronics GmbH</p>
+                            <p class="position">Minijob – Wartung des Shopify Onlineshops</p>
+                        </div>
+                    </div>
+                    <div class="zeitraum-linie">
+                    </div>
+                    <p class="zeitraum">
+                        <span>Oktober 21 –</span>
+                        <span>Dezember 22</span>
+                    </p>
+                </div>
+            </div>
+            <div class="shape-4 shape"></div>
+        </section>
+        <section class="kontakt">
+            <h2>Kontakt</h2>
+            <h3>Hier bin ich erreichbar</h3>
+            <div class="kontakt-arten">
+                <a href="mailto:alif.borgmeier@tu-dortmund.de" class="kontakt-link">
+                    <div class="kontakt-art email">
+                        <div class="logo">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <span>E-Mail</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/alif-borgmeier-b39359263/" class="kontakt-link" target="_blank">
+                    <div class="kontakt-art linkedin">
+                        <div class="logo">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <span>LinkedIn</span>
+                    </div>
+                </a>
+                <a href="https://github.com/alifb" class="kontakt-link" target="_blank">
+                    <div class="kontakt-art github">
+                        <div class="logo">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <span>GitHub</span>
+                    </div>
+            </div>
+            </a>
+            <div class="shape-5 shape"></div>
         </section>
     </main>
-    <footer>
-        <div class="contact">
-            <h2 data-lang="contact-heading">Feel free to contact me!</h2>
-            <ul>
-                <li class="contact-info" id="github"><a href="https://github.com/alifb" target="_blank" title="Link to my GitHub Profile" data-langTitle="contact-linkTitleGitHub"><i class="fa-brands fa-github"></i></a></li>
-                <li class="contact-info" id="mail"><a href="mailto:alif.borgmeier@tu-dortmund.de" title="Link to write me an E-Mail" data-langTitle="contact-linkTitleMail"><i class="fa-solid fa-envelope"></i></a></li>
-            </ul>
-        </div>
-        <div class="copyright">
-            &#169; <span id="copyright-year">2022</span> Alif Borgmeier
-        </div>
-    </footer>
-    <script src="js/main.js" defer></script>
+    <script src="js/anim.js"></script>
 </body>
+
 </html>
