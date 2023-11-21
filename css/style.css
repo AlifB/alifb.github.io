@@ -22,7 +22,6 @@ main {
 
 section {
     position: relative;
-    overflow: hidden;
     min-height: 100vh;
     padding: 50px;
 }
