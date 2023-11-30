@@ -28,6 +28,18 @@ section {
 
 .blur {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+    background: linear-gradient(135deg, #1b57da, #f7137e, #3c83f5);
+    background-size: 200% 200%;
+    animation: gradient-animation 25s ease-in-out infinite;
+}
+
+/* .blur {
+    position: absolute;
     background: rgba(0, 0, 0, 0.01);
     backdrop-filter: blur(350px);
     -webkit-backdrop-filter: blur(350px);
@@ -36,13 +48,13 @@ section {
     right: 0;
     bottom: 0;
     z-index: -10;
-}
+} */
 
 .shape.hidden {
     visibility: hidden;
 }
 
-.shape-1 {
+/* .shape-1 {
     position: absolute;
     left: calc(-1 * 750px / 2);
     top: calc(50% - 750px / 2);
@@ -97,7 +109,7 @@ section {
     z-index: -20;
     border-radius: 100%;
     background-color: #16FF02;
-}
+} */
 
 .name {
     display: flex;
@@ -402,6 +414,7 @@ h3 {
     .ueber-mich .bilder {
         display: flex;
     }
+
     .ueber-mich .bilder img {
         margin: 15px;
     }

@@ -1,16 +1,16 @@
 :root {
     /* Timings Erfahrungen */
     --anim-duration-jahrh3: 0s;
-    --anim-duration-jobkarte: 600ms;
-    --anim-duration-zeitlinie: 400ms;
-    --anim-delay-zeitraum: 350ms;
-    --anim-duration-zeitraum: 650ms;
+    --anim-duration-jobkarte: 350ms;
+    --anim-duration-zeitlinie: 200ms;
+    --anim-delay-zeitraum: 150ms;
+    --anim-duration-zeitraum: 200ms;
 }
 
 /*
     Animationen Shapes
 */
-.shape-1 {
+/* .shape-1 {
     animation-name: zeitraum-blend-in;
     animation-duration: 3000ms;
     animation-timing-function: ease-in-out;
@@ -46,6 +46,21 @@
     animation-direction: alternate-reverse;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+} */
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+
 }
 
 /*
