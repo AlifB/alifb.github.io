@@ -180,7 +180,7 @@ section {
     margin-bottom: 50px;
 }
 
-.erfahrungen .jahr:nth-last-child(2) {
+.erfahrungen .jahr:last-child{
     margin-bottom: auto;
 }
 
