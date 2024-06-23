@@ -1,10 +1,10 @@
 :root {
-    /* Timings Erfahrungen */
-    --anim-duration-jahrh3: 0s;
-    --anim-duration-jobkarte: 350ms;
-    --anim-duration-zeitlinie: 200ms;
-    --anim-delay-zeitraum: 150ms;
-    --anim-duration-zeitraum: 200ms;
+  /* Timings Erfahrungen */
+  --anim-duration-jahrh3: 0s;
+  --anim-duration-jobkarte: 350ms;
+  --anim-duration-zeitlinie: 200ms;
+  --anim-delay-zeitraum: 150ms;
+  --anim-duration-zeitraum: 200ms;
 }
 
 /*
@@ -49,18 +49,17 @@
 } */
 
 @keyframes gradient-animation {
-    0% {
-        background-position: 0% 0%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
 
-    50% {
-        background-position: 100% 100%;
-    }
+  50% {
+    background-position: 100% 100%;
+  }
 
-    100% {
-        background-position: 0% 0%;
-    }
-
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 /*
@@ -68,155 +67,349 @@
 */
 
 .erfahrungen.animate .jahr h3 {
-    animation-name: jobkarte-blend-in;
-    animation-duration: var(--anim-duration-jahrh3);
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: jobkarte-blend-in;
+  animation-duration: var(--anim-duration-jahrh3);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .erfahrungen.animate .jahr .job .jobkarte {
-    animation-name: jobkarte-blend-in;
-    animation-duration: var(--anim-duration-jobkarte);
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: jobkarte-blend-in;
+  animation-duration: var(--anim-duration-jobkarte);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .erfahrungen.animate .zeitraum-linie::after {
-    animation-name: zeitraum-linie-draw;
-    animation-duration: var(--anim-duration-jobkarte);
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: zeitraum-linie-draw;
+  animation-duration: var(--anim-duration-jobkarte);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .erfahrungen.animate .zeitraum {
-    animation-name: jobkarte-blend-in, zeitraum-blend-in;
-    animation-duration: var(--anim-duration-zeitraum);
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: jobkarte-blend-in, zeitraum-blend-in;
+  animation-duration: var(--anim-duration-zeitraum);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .erfahrungen.animate .jahr:nth-child(2) h3 {
-    animation-delay: calc(var(--anim-duration-jahrh3)*0 + var(--anim-duration-jobkarte)*0 + var(--anim-duration-zeitlinie)*0 + var(--anim-delay-zeitraum)*0 + var(--anim-duration-zeitraum)*0);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 0 + var(--anim-duration-jobkarte) * 0 +
+      var(--anim-duration-zeitlinie) * 0 + var(--anim-delay-zeitraum) * 0 +
+      var(--anim-duration-zeitraum) * 0
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(2) .jobkarte {
-    animation-delay: calc(var(--anim-duration-jahrh3)*1 + var(--anim-duration-jobkarte)*0 + var(--anim-duration-zeitlinie)*0 + var(--anim-delay-zeitraum)*0 + var(--anim-duration-zeitraum)*0);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 1 + var(--anim-duration-jobkarte) * 0 +
+      var(--anim-duration-zeitlinie) * 0 + var(--anim-delay-zeitraum) * 0 +
+      var(--anim-duration-zeitraum) * 0
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(2) .zeitraum-linie::after {
-    animation-delay: calc(var(--anim-duration-jahrh3)*1 + var(--anim-duration-jobkarte)*1 + var(--anim-duration-zeitlinie)*0 + var(--anim-delay-zeitraum)*0 + var(--anim-duration-zeitraum)*0);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 1 + var(--anim-duration-jobkarte) * 1 +
+      var(--anim-duration-zeitlinie) * 0 + var(--anim-delay-zeitraum) * 0 +
+      var(--anim-duration-zeitraum) * 0
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(2) .zeitraum {
-    animation-delay: calc(var(--anim-duration-jahrh3)*1 + var(--anim-duration-jobkarte)*1 + var(--anim-duration-zeitlinie)*1 + var(--anim-delay-zeitraum)*1 + var(--anim-duration-zeitraum)*0);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 1 + var(--anim-duration-jobkarte) * 1 +
+      var(--anim-duration-zeitlinie) * 1 + var(--anim-delay-zeitraum) * 1 +
+      var(--anim-duration-zeitraum) * 0
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(3) h3 {
-    animation-delay: calc(var(--anim-duration-jahrh3)*1 + var(--anim-duration-jobkarte)*1 + var(--anim-duration-zeitlinie)*1 + var(--anim-delay-zeitraum)*1 + var(--anim-duration-zeitraum)*1);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 1 + var(--anim-duration-jobkarte) * 1 +
+      var(--anim-duration-zeitlinie) * 1 + var(--anim-delay-zeitraum) * 1 +
+      var(--anim-duration-zeitraum) * 1
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(3) .jobkarte {
-    animation-delay: calc(var(--anim-duration-jahrh3)*2 + var(--anim-duration-jobkarte)*1 + var(--anim-duration-zeitlinie)*1 + var(--anim-delay-zeitraum)*1 + var(--anim-duration-zeitraum)*1);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 2 + var(--anim-duration-jobkarte) * 1 +
+      var(--anim-duration-zeitlinie) * 1 + var(--anim-delay-zeitraum) * 1 +
+      var(--anim-duration-zeitraum) * 1
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(3) .zeitraum-linie::after {
-    animation-delay: calc(var(--anim-duration-jahrh3)*2 + var(--anim-duration-jobkarte)*2 + var(--anim-duration-zeitlinie)*1 + var(--anim-delay-zeitraum)*1 + var(--anim-duration-zeitraum)*1);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 2 + var(--anim-duration-jobkarte) * 2 +
+      var(--anim-duration-zeitlinie) * 1 + var(--anim-delay-zeitraum) * 1 +
+      var(--anim-duration-zeitraum) * 1
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(3) .zeitraum {
-    animation-delay: calc(var(--anim-duration-jahrh3)*2 + var(--anim-duration-jobkarte)*2 + var(--anim-duration-zeitlinie)*2 + var(--anim-delay-zeitraum)*2 + var(--anim-duration-zeitraum)*1);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 2 + var(--anim-duration-jobkarte) * 2 +
+      var(--anim-duration-zeitlinie) * 2 + var(--anim-delay-zeitraum) * 2 +
+      var(--anim-duration-zeitraum) * 1
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(4) h3 {
-    animation-delay: calc(var(--anim-duration-jahrh3)*2 + var(--anim-duration-jobkarte)*2 + var(--anim-duration-zeitlinie)*2 + var(--anim-delay-zeitraum)*2 + var(--anim-duration-zeitraum)*2);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 2 + var(--anim-duration-jobkarte) * 2 +
+      var(--anim-duration-zeitlinie) * 2 + var(--anim-delay-zeitraum) * 2 +
+      var(--anim-duration-zeitraum) * 2
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(4) .jobkarte {
-    animation-delay: calc(var(--anim-duration-jahrh3)*3 + var(--anim-duration-jobkarte)*2 + var(--anim-duration-zeitlinie)*2 + var(--anim-delay-zeitraum)*2 + var(--anim-duration-zeitraum)*2);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 3 + var(--anim-duration-jobkarte) * 2 +
+      var(--anim-duration-zeitlinie) * 2 + var(--anim-delay-zeitraum) * 2 +
+      var(--anim-duration-zeitraum) * 2
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(4) .zeitraum-linie::after {
-    animation-delay: calc(var(--anim-duration-jahrh3)*3 + var(--anim-duration-jobkarte)*3 + var(--anim-duration-zeitlinie)*2 + var(--anim-delay-zeitraum)*2 + var(--anim-duration-zeitraum)*2);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 3 + var(--anim-duration-jobkarte) * 3 +
+      var(--anim-duration-zeitlinie) * 2 + var(--anim-delay-zeitraum) * 2 +
+      var(--anim-duration-zeitraum) * 2
+  );
 }
 
 .erfahrungen.animate .jahr:nth-child(4) .zeitraum {
-    animation-delay: calc(var(--anim-duration-jahrh3)*3 + var(--anim-duration-jobkarte)*3 + var(--anim-duration-zeitlinie)*3 + var(--anim-delay-zeitraum)*3 + var(--anim-duration-zeitraum)*2);
+  animation-delay: calc(
+    var(--anim-duration-jahrh3) * 3 + var(--anim-duration-jobkarte) * 3 +
+      var(--anim-duration-zeitlinie) * 3 + var(--anim-delay-zeitraum) * 3 +
+      var(--anim-duration-zeitraum) * 2
+  );
 }
-
-
 
 /*
     Keyframes
 */
 
 @keyframes zeitraum-linie-draw {
-    0% {
-        width: 0px;
-    }
+  0% {
+    width: 0px;
+  }
 
-    100% {
-        width: 100%;
-    }
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes jobkarte-blend-in {
-    0% {
-        transform: translateX(-15px);
-        opacity: 0;
-    }
+  0% {
+    transform: translateX(-15px);
+    opacity: 0;
+  }
 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes zeitraum-blend-in {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes shape-2-movement {
-    0% {
-        transform: translate(0, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
 
-    100% {
-        transform: translate(75%, 5%);
-    }
+  100% {
+    transform: translate(75%, 5%);
+  }
 }
 
 @keyframes shape-3-movement {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes shape-4-movement {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    100% {
-        transform: scale(1.75);
-    }
+  100% {
+    transform: scale(1.75);
+  }
 }
 
 @keyframes shape-5-movement {
-    0% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(-100%);
+  }
 
-    100% {
-        transform: translateX(0%);
-    }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/*
+    Name animation
+*/
+
+@keyframes name-animation-h1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 100px) scale(1);
+  }
+  100% {
+    transform: translate(0, -8%) scale(0);
+  }
+}
+
+@keyframes name-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes reverse-name-animation {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes reverse-name-animation-h1 {
+  0% {
+    transform: translate(0, -8%) scale(0);
+  }
+  50% {
+    transform: translate(0, 100px) scale(1);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes header-logo-animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes header-logo-animation-reverse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes header-amimation {
+  0% {
+    filter: brightness(1);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+  }
+  100% {
+    filter: brightness(0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes header-amimation-reverse {
+  0% {
+    filter: brightness(0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  100% {
+    filter: brightness(1);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+  }
+}
+
+.header-animate {
+  animation-name: header-amimation;
+  animation-delay: 375ms;
+  animation-duration: 450ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.header-animate-reverse {
+  animation-name: header-amimation-reverse;
+  animation-duration: 350ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.logo-animate {
+  animation-name: header-logo-animation;
+  animation-delay: 375ms;
+  animation-duration: 450ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.logo-animate-reverse {
+  animation-name: header-logo-animation-reverse;
+  animation-duration: 350ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.name-animate h1 {
+  animation-name: name-animation-h1;
+  animation-duration: 575ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.name-animate {
+  animation-name: name-animation;
+  animation-duration: 575ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.name-animate-reverse h1 {
+  animation-name: reverse-name-animation-h1;
+  animation-duration: 575ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.name-animate-reverse {
+  animation-name: reverse-name-animation;
+  animation-duration: 575ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
