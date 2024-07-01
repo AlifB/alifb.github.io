@@ -7,47 +7,6 @@
   --anim-duration-zeitraum: 200ms;
 }
 
-/*
-    Animationen Shapes
-*/
-/* .shape-1 {
-    animation-name: zeitraum-blend-in;
-    animation-duration: 3000ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-.shape-2 {
-    animation-name: zeitraum-blend-in, shape-2-movement;
-    animation-duration: 3000ms, 4500ms;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate-reverse, alternate;
-    animation-iteration-count: infinite;
-}
-
-.shape-3 {
-    animation-name: shape-3-movement;
-    animation-duration: 15000ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.shape-4 {
-    animation-name: shape-4-movement;
-    animation-duration: 8000ms;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-}
-
-.shape-5 {
-    animation-name: shape-5-movement;
-    animation-duration: 20000ms;
-    animation-direction: alternate-reverse;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-} */
-
 @keyframes gradient-animation {
   0% {
     background-position: 0% 0%;
@@ -223,46 +182,6 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes shape-2-movement {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(75%, 5%);
-  }
-}
-
-@keyframes shape-3-movement {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes shape-4-movement {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.75);
-  }
-}
-
-@keyframes shape-5-movement {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0%);
   }
 }
 
