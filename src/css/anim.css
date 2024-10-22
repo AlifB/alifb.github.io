@@ -32,7 +32,7 @@
   animation-fill-mode: forwards;
 }
 
-.erfahrungen.animate .jahr .job .jobkarte {
+.erfahrungen.animate .jahr .job .job-container {
   animation-name: jobkarte-blend-in;
   animation-duration: var(--anim-duration-jobkarte);
   animation-timing-function: ease-in-out;
@@ -61,7 +61,7 @@
   );
 }
 
-.erfahrungen.animate .jahr:nth-child(2) .jobkarte {
+.erfahrungen.animate .jahr:nth-child(2) .job-container {
   animation-delay: calc(
     var(--anim-duration-jahrh3) * 1 + var(--anim-duration-jobkarte) * 0 +
       var(--anim-duration-zeitlinie) * 0 + var(--anim-delay-zeitraum) * 0 +
@@ -93,7 +93,7 @@
   );
 }
 
-.erfahrungen.animate .jahr:nth-child(3) .jobkarte {
+.erfahrungen.animate .jahr:nth-child(3) .job-container {
   animation-delay: calc(
     var(--anim-duration-jahrh3) * 2 + var(--anim-duration-jobkarte) * 1 +
       var(--anim-duration-zeitlinie) * 1 + var(--anim-delay-zeitraum) * 1 +
@@ -125,7 +125,7 @@
   );
 }
 
-.erfahrungen.animate .jahr:nth-child(4) .jobkarte {
+.erfahrungen.animate .jahr:nth-child(4) .job-container {
   animation-delay: calc(
     var(--anim-duration-jahrh3) * 3 + var(--anim-duration-jobkarte) * 2 +
       var(--anim-duration-zeitlinie) * 2 + var(--anim-delay-zeitraum) * 2 +
